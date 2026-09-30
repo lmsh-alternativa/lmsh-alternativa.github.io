@@ -4,73 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Кафедра математики | ЛМШ</title>
-    <style>
-        :root {
-            --primary-bg: #ffffff;
-            --secondary-bg: #f5f5f7;
-            --text-main: #1d1d1f;
-            --accent-color: #0066cc;
-            --nav-text: rgba(0,0,0,0.8);
-        }
-
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--primary-bg);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        header {
-            position: sticky; top: 0; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e5e5ea; z-index: 100; display: flex; justify-content: space-between;
-            align-items: center; padding: 15px 40px;
-        }
-
-        .logo { font-weight: 700; font-size: 1.2rem; color: var(--text-main); text-decoration: none; }
-        
-        nav a { text-decoration: none; color: var(--nav-text); font-size: 0.95rem; font-weight: 500; margin-left: 20px; }
-        nav a:hover { color: var(--accent-color); }
-
-        .department-header { background-color: var(--secondary-bg); padding: 80px 40px; text-align: center; border-bottom: 1px solid #e5e5ea; }
-        .department-header h1 { font-size: 3rem; margin-bottom: 15px; color: var(--accent-color); }
-
-        .department-content { max-width: 800px; margin: 50px auto; padding: 0 20px 100px 20px; }
-        .department-content h2 { font-size: 2rem; margin-top: 40px; border-bottom: 2px solid var(--secondary-bg); padding-bottom: 10px; }
-
-        .back-link { display: inline-block; margin-top: 40px; color: var(--accent-color); text-decoration: none; font-weight: 600; padding: 10px 20px; background: var(--secondary-bg); border-radius: 20px;}
-        .back-link:hover { background: #e5e5ea; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <a href="index.html" class="logo">ЛМШ «Альтернатива» при ЦДОД</a>
-        <nav><a href="index.html">Вернуться на главную</a></nav>
+        <nav>
+            <a href="index.html">О нас</a>
+            <a href="study.html" style="color: var(--accent-teal);">Учебная часть</a>
+            <a href="activities.html">Неучебная часть</a>
+            <a href="admission.html">Собеседования</a>
+        </nav>
     </header>
 
-    <section class="department-header">
+    <section class="page-header">
         <h1>Кафедра математики</h1>
         <p>От школьной геометрии до топологии и теории графов.</p>
     </section>
 
-    <section class="department-content">
-        <h2>О кафедре</h2>
-        <p>На нашей кафедре мы учим школьников выходить за рамки стандартной программы. Мы не просто решаем уравнения, мы учим доказывать теоремы, мыслить абстрактно и видеть красоту в строгих логических конструкциях.</p>
+    <div class="container">
+        <div class="head-of-dept">
+            <img src="ФОТО_ЗАВ_МАТЕМ.jpg" alt="Заведующий кафедрой математики">
+            <div class="head-info">
+                <span class="badge">Заведующий кафедрой</span>
+                <h2>Имя Фамилия</h2>
+                <p>Краткая биография заведующего. На нашей кафедре мы учим школьников выходить за рамки стандартной программы: не просто решать уравнения, а доказывать теоремы, мыслить абстрактно и видеть красоту в строгих логических конструкциях.</p>
+                <p style="color: var(--accent-teal); font-weight: 600; margin-top: 10px;">
+                    <i class="fas fa-book"></i> Основные курсы: Олимпиадная геометрия, Теория чисел, Введение в высшую математику
+                </p>
+            </div>
+        </div>
 
-        <h2>Основные курсы</h2>
-        <ul>
-            <li><strong>Олимпиадная геометрия:</strong> Метод масс, инверсия, проективная геометрия.</li>
-            <li><strong>Теория чисел:</strong> Алгоритм Евклида, сравнения по модулю, малая теорема Ферма.</li>
-            <li><strong>Комбинаторика и графы:</strong> Деревья, планарные графы, формулы включений-исключений.</li>
-            <li><strong>Высшая математика (введение):</strong> Основы математического анализа и линейной алгебры.</li>
-        </ul>
+        <h2 style="text-align: center; margin-bottom: 40px; border-bottom: none;">Команда преподавателей</h2>
 
-        <h2>Преподаватели</h2>
-        <p>Занятия ведут студенты и аспиранты ведущих физических вузов страны (МФТИ, МИФИ, Физфак МГУ).</p>
+        <div class="teachers-grid">
+            <div class="teacher-card">
+                <img src="ФОТО_МАТЕМ_ПРЕПОД_1.jpg" alt="Преподаватель математики">
+                <h3>Имя Фамилия</h3>
+                <div class="teacher-subjects">Олимпиадная геометрия</div>
+                <p>Метод масс, инверсия, проективная геометрия.</p>
+            </div>
 
-        <a href="index.html" class="back-link">← Вернуться на главную</a>
-    </section>
+            <div class="teacher-card">
+                <img src="ФОТО_МАТЕМ_ПРЕПОД_2.jpg" alt="Преподаватель математики">
+                <h3>Имя Фамилия</h3>
+                <div class="teacher-subjects">Теория чисел, Комбинаторика</div>
+                <p>Алгоритм Евклида, сравнения по модулю, малая теорема Ферма, деревья, планарные графы, формула включений-исключений.</p>
+            </div>
+
+            <div class="teacher-card">
+                <img src="ФОТО_МАТЕМ_ПРЕПОД_3.jpg" alt="Преподаватель математики">
+                <h3>Имя Фамилия</h3>
+                <div class="teacher-subjects">Высшая математика (введение)</div>
+                <p>Основы математического анализа и линейной алгебры.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="study.html" class="btn" style="background-color: var(--secondary-bg); color: var(--text-main); box-shadow: none; border: 1px solid rgba(255,255,255,0.1);">← К списку кафедр</a>
+        </div>
+    </div>
 
 </body>
 </html>

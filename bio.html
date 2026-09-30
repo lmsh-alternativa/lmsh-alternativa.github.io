@@ -3,74 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Кафедра физики | ЛМШ</title>
-    <style>
-        :root {
-            --primary-bg: #ffffff;
-            --secondary-bg: #f5f5f7;
-            --text-main: #1d1d1f;
-            --accent-color: #0066cc;
-            --nav-text: rgba(0,0,0,0.8);
-        }
-
-        body {
-            margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--primary-bg);
-            color: var(--text-main);
-            line-height: 1.6;
-        }
-
-        header {
-            position: sticky; top: 0; background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e5e5ea; z-index: 100; display: flex; justify-content: space-between;
-            align-items: center; padding: 15px 40px;
-        }
-
-        .logo { font-weight: 700; font-size: 1.2rem; color: var(--text-main); text-decoration: none; }
-
-        nav a { text-decoration: none; color: var(--nav-text); font-size: 0.95rem; font-weight: 500; margin-left: 20px; }
-        nav a:hover { color: var(--accent-color); }
-
-        .department-header { background-color: var(--secondary-bg); padding: 80px 40px; text-align: center; border-bottom: 1px solid #e5e5ea; }
-        .department-header h1 { font-size: 3rem; margin-bottom: 15px; color: var(--accent-color); }
-
-        .department-content { max-width: 800px; margin: 50px auto; padding: 0 20px 100px 20px; }
-        .department-content h2 { font-size: 2rem; margin-top: 40px; border-bottom: 2px solid var(--secondary-bg); padding-bottom: 10px; }
-
-        .back-link { display: inline-block; margin-top: 40px; color: var(--accent-color); text-decoration: none; font-weight: 600; padding: 10px 20px; background: var(--secondary-bg); border-radius: 20px;}
-        .back-link:hover { background: #e5e5ea; }
-    </style>
+    <title>Кафедра биологии | ЛМШ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <a href="index.html" class="logo">ЛМШ «Альтернатива» при ЦДОД</a>
-        <nav><a href="index.html">Вернуться на главную</a></nav>
+        <nav>
+            <a href="index.html">О нас</a>
+            <a href="study.html" style="color: var(--accent-teal);">Учебная часть</a>
+            <a href="activities.html">Неучебная часть</a>
+            <a href="admission.html">Собеседования</a>
+        </nav>
     </header>
 
-    <section class="department-header">
-        <h1>Кафедра физики</h1>
-        <p>Постановка экспериментов, основы механики и разбор сложных олимпиадных задач.</p>
+    <section class="page-header">
+        <h1>Кафедра биологии</h1>
+        <p>Зоология, анатомия, генетика и полевая экология: от теории к практическим турам олимпиад.</p>
     </section>
 
-    <section class="department-content">
-        <h2>О кафедре</h2>
-        <p>Физика - это наука о том, как устроен наш мир. На нашей кафедре мы не заучиваем сухие формулы, а учимся понимать физические процессы. Мы ставим реальные эксперименты и разбираем явления, которые нас окружают каждый день.</p>
+    <div class="container">
+        <div class="head-of-dept">
+            <img src="ФОТО_ЗАВ_БИО.jpg" alt="Заведующий кафедрой биологии">
+            <div class="head-info">
+                <span class="badge">Заведующий кафедрой</span>
+                <h2>Имя Фамилия</h2>
+                <p>Краткая биография заведующего. Например: выпускник биологического факультета, руководит кафедрой, составляет учебную программу и ведёт подготовку к практическим турам олимпиад.</p>
+                <p style="color: var(--accent-teal); font-weight: 600; margin-top: 10px;">
+                    <i class="fas fa-book"></i> Основные курсы: Зоология и ботаника, Полевая экология
+                </p>
+            </div>
+        </div>
 
-        <h2>Основные направления</h2>
-        <ul>
-            <li><strong>Зоология и ботаника:</strong> Углубленное изучение систематики, эволюции, морфологии и физиологии животных и растений. Подготовка к практическим турам олимпиад.</li>
-            <li><strong>Анатомия и физиология человека:</strong> Как работают наши органы и системы, нейробиология, механизмы памяти, работа иммунитета и гуморальная регуляция (гормоны).</li>
-            <li><strong>Молекулярная биология и генетика:</strong> Строение ДНК/РНК, процессы биосинтеза белка, решение генетических задач на сцепленное наследование и законы Менделя в современной интерпретации.</li>
-            <li><strong>Полевая экология:</strong> Выходы на природу, методы сбора полевого материала, гербаризация, анализ биоразнообразия и изучение взаимодействий внутри экосистем.</li>
-        </ul>
+        <h2 style="text-align: center; margin-bottom: 40px; border-bottom: none;">Команда преподавателей</h2>
 
-        <h2>Преподаватели</h2>
-        <p>Занятия ведут студенты и аспиранты ведущих физических вузов страны (МФТИ, МИФИ, Физфак МГУ).</p>
+        <div class="teachers-grid">
+            <div class="teacher-card">
+                <img src="ФОТО_БИО_ПРЕПОД_1.jpg" alt="Преподаватель биологии">
+                <h3>Имя Фамилия</h3>
+                <div class="teacher-subjects">Зоология и ботаника</div>
+                <p>Систематика, эволюция, морфология и физиология животных и растений. Подготовка к практическим турам олимпиад.</p>
+            </div>
 
-        <a href="index.html" class="back-link">← Вернуться на главную</a>
-    </section>
+            <div class="teacher-card">
+                <img src="ФОТО_БИО_ПРЕПОД_2.jpg" alt="Преподаватель биологии">
+                <h3>Имя Фамилия</h3>
+                <div class="teacher-subjects">Анатомия и физиология человека</div>
+                <p>Как работают органы и системы, нейробиология, механизмы памяти, иммунитет и гуморальная регуляция.</p>
+            </div>
+
+            <div class="teacher-card">
+                <img src="ФОТО_БИО_ПРЕПОД_3.jpg" alt="Преподаватель биологии">
+                <h3>Имя Фамилия</h3>
+                <div class="teacher-subjects">Молекулярная биология и генетика</div>
+                <p>Строение ДНК/РНК, биосинтез белка, задачи на сцепленное наследование и законы Менделя.</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="study.html" class="btn" style="background-color: var(--secondary-bg); color: var(--text-main); box-shadow: none; border: 1px solid rgba(255,255,255,0.1);">← К списку кафедр</a>
+        </div>
+    </div>
 
 </body>
 </html>
