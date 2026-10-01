@@ -873,13 +873,30 @@ header nav {
     border-top: 1px solid var(--line);
 }
 
+    /* Имя, годы и предметы друг под другом */
     .alumni-list li {
         display: grid;
-        grid-template-columns: 1fr auto;
         align-content: start;
-        gap: 2px 12px;
+        gap: 2px 14px;
         padding: 12px 0;
         border-bottom: 1px solid var(--line);
+    }
+
+        /* С фото: маленькое фото слева; без фото — только текст */
+        .alumni-list li:has(img) {
+            grid-template-columns: 64px 1fr;
+            grid-template-rows: auto auto 1fr;
+        }
+
+    .alumni-list img {
+        grid-row: span 3;
+        width: 64px;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        background-color: #e6e1d6;
+        border-radius: 6px;
+        color: var(--muted);
+        font-size: 0.7rem;
     }
 
 .alumni-name {
@@ -888,12 +905,11 @@ header nav {
 
 .alumni-years {
     color: var(--pink-ink);
+    font-size: 0.95rem;
     font-weight: 600;
-    text-align: right;
 }
 
 .alumni-subjects {
-    grid-column: 1 / -1;
     color: var(--muted);
     font-size: 0.95rem;
 }
@@ -953,6 +969,21 @@ header nav {
     .shift-head h2 {
         margin: 0;
     }
+
+/* Штамп у заголовка смены (например, «Ковид» у 2020 года) */
+.stamp {
+    display: inline-block;
+    margin-left: 0.3em;
+    padding: 0.15em 0.45em;
+    border: 3px solid var(--pink-ink);
+    border-radius: 6px;
+    color: var(--pink-ink);
+    font-size: 0.5em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    transform: rotate(-6deg);
+}
 
 .director {
     display: flex;
