@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fffdf8">
+    <title>История | ЛМШ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..800&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <!-- Ссылки на годы и просмотр фото крупно -->
+    <script src="history.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-mark">ЛМШ</span>
+            <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
+        <nav id="site-nav" aria-label="Разделы сайта">
+            <a href="index.html">О нас</a>
+            <a href="study.html">Учебная часть</a>
+            <a href="activities.html">Неучебная часть</a>
+            <!-- Активный раздел отмечен aria-current -->
+            <a href="history.html" aria-current="page">История</a>
+            <a href="admission.html">Собеседования</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>История ЛМШ</h1>
+        <p>Прошлые смены: фотографии, директора и истории.</p>
+    </section>
+
+    <div class="container">
+
+        <!-- Ссылки на годы появляются сами — по одной на каждую смену ниже -->
+        <nav class="year-nav" aria-label="Смены по годам"></nav>
+
+        <!--
+            КАК ДОБАВИТЬ СМЕНУ
+            1. Скопируй блок <article> ... </article> целиком и вставь его над самой свежей сменой.
+            2. Поменяй год в id="smena-ГОД" и в заголовке.
+            3. Впиши директора, рассказ и пути к фото. Фото смены удобно класть в папку smeny/ГОД/.
+               Фото можно добавлять сколько угодно — сетка подстроится сама.
+            Блоков «заголовок истории + текст» (<h3> + <p>) тоже может быть сколько угодно.
+        -->
+
+        <!-- ===== Смена 2026 ===== -->
+        <article class="shift" id="smena-2026">
+            <div class="shift-head">
+                <h2>Смена 2026</h2>
+                <div class="director">
+                    <img src="smeny/2026/director.jpg" alt="Директор смены 2026">
+                    <div>
+                        <span class="role">Директор смены</span>
+                        <p class="director-name">Имя Фамилия</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shift-story">
+                <p>Пара слов о смене: чем она запомнилась, какой была большая игра, какие появились традиции.</p>
+                <h3>Название истории</h3>
+                <p>Текст истории. Таких блоков «заголовок + текст» может быть сколько угодно.</p>
+            </div>
+
+            <div class="photos">
+                <img src="smeny/2026/1.jpg" alt="Смена 2026" loading="lazy">
+                <img src="smeny/2026/2.jpg" alt="Смена 2026" loading="lazy">
+                <img src="smeny/2026/3.jpg" alt="Смена 2026" loading="lazy">
+                <img src="smeny/2026/4.jpg" alt="Смена 2026" loading="lazy">
+                <img src="smeny/2026/5.jpg" alt="Смена 2026" loading="lazy">
+                <img src="smeny/2026/6.jpg" alt="Смена 2026" loading="lazy">
+            </div>
+        </article>
+
+        <!-- ===== Смена 2025 ===== -->
+        <article class="shift" id="smena-2025">
+            <div class="shift-head">
+                <h2>Смена 2025</h2>
+                <div class="director">
+                    <img src="smeny/2025/director.jpg" alt="Директор смены 2025">
+                    <div>
+                        <span class="role">Директор смены</span>
+                        <p class="director-name">Имя Фамилия</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="shift-story">
+                <p>Пара слов о смене: чем она запомнилась, какой была большая игра, какие появились традиции.</p>
+            </div>
+
+            <div class="photos">
+                <img src="smeny/2025/1.jpg" alt="Смена 2025" loading="lazy">
+                <img src="smeny/2025/2.jpg" alt="Смена 2025" loading="lazy">
+                <img src="smeny/2025/3.jpg" alt="Смена 2025" loading="lazy">
+                <img src="smeny/2025/4.jpg" alt="Смена 2025" loading="lazy">
+            </div>
+        </article>
+
+    </div>
+
+    <footer>
+        <span>ЛМШ «Альтернатива» при ЦДОД</span>
+        <a href="admission.html">Записаться на собеседование</a>
+    </footer>
+
+</body>
+</html>
