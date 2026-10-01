@@ -6,12 +6,17 @@
 const filters = document.querySelector('.filters');
 const status = document.querySelector('.people-status');
 
+// Годы, когда смены не было: в диапазонах вроде «2018–2022» они пропускаются
+const NO_SHIFT = [2020];
+
 // «2016–2019, 2021» → [2016, 2017, 2018, 2019, 2021]
 function parseYears(text) {
     const years = [];
     for (const part of text.split(',')) {
         const [from, to = from] = (part.match(/\d{4}/g) ?? []).map(Number);
-        for (let year = from; year <= to; year++) years.push(year);
+        for (let year = from; year <= to; year++) {
+            if (!NO_SHIFT.includes(year)) years.push(year);
+        }
     }
     return years;
 }
