@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="only light">
+    <title>Вечерние клубы | ЛМШ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..800&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <!-- Просмотр фото крупно -->
+    <script src="photos.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-mark">Л<span>М</span>Ш</span>
+            <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
+        <nav id="site-nav" aria-label="Разделы сайта">
+            <a href="index.html">О нас</a>
+            <a href="study.html">Учебная часть</a>
+            <!-- Активный раздел отмечен aria-current -->
+            <a href="activities.html" aria-current="true">Неучебная часть</a>
+            <a href="history.html">История</a>
+            <a href="people.html">Люди</a>
+            <a href="admission.html">Собеседования</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <p class="kicker"><a href="activities.html">← Вся неучебка</a></p>
+        <h1>Вечерние клубы</h1>
+        <p>Каждый вечер — площадки по интересам. Можно прийти в любой клуб или открыть свой.</p>
+    </section>
+
+    <!-- Фото клубов удобно класть в папку neuchebka/clubs/ -->
+    <section class="split">
+        <div class="split-text">
+            <h2>Как это устроено</h2>
+            <p>Каждый вечер работают площадки по интересам: настольные игры, гитара, кинопоказы и дискуссионные клубы. Любой желающий может найти занятие по душе или организовать что-то своё.</p>
+            <p>Пара слов о том, когда проходят клубы и как выбрать, куда пойти.</p>
+        </div>
+        <div class="split-image">
+            <img src="neuchebka/clubs/main.jpg" alt="Вечерние клубы">
+        </div>
+    </section>
+
+    <div class="container">
+
+        <h2>Какие бывают клубы</h2>
+
+        <!-- Чтобы добавить клуб, скопируй блок <div> ... </div> внутри «cards» -->
+        <div class="cards">
+            <div>
+                <img src="neuchebka/clubs/nastolki.jpg" alt="" loading="lazy">
+                <h3>Настольные игры</h3>
+                <p>Пара слов о клубе: во что играют, кто ведёт.</p>
+            </div>
+            <div>
+                <img src="neuchebka/clubs/gitara.jpg" alt="" loading="lazy">
+                <h3>Гитара</h3>
+                <p>Пара слов о клубе: поют вместе или учатся играть.</p>
+            </div>
+            <div>
+                <img src="neuchebka/clubs/kino.jpg" alt="" loading="lazy">
+                <h3>Кинопоказы</h3>
+                <p>Пара слов о клубе: какие фильмы смотрят и обсуждают ли их после.</p>
+            </div>
+            <div>
+                <img src="neuchebka/clubs/diskussii.jpg" alt="" loading="lazy">
+                <h3>Дискуссионный клуб</h3>
+                <p>Пара слов о клубе: о чём спорят и как проходит дискуссия.</p>
+            </div>
+        </div>
+
+        <div class="note">
+            <h3>Свой клуб</h3>
+            <p>Умеешь что-то интересное? Любой желающий может организовать свой клуб. Пара слов о том, как это сделать.</p>
+        </div>
+
+        <h2>Фото</h2>
+        <div class="photos">
+            <img src="neuchebka/clubs/1.jpg" alt="Вечерние клубы" loading="lazy">
+            <img src="neuchebka/clubs/2.jpg" alt="Вечерние клубы" loading="lazy">
+            <img src="neuchebka/clubs/3.jpg" alt="Вечерние клубы" loading="lazy">
+            <img src="neuchebka/clubs/4.jpg" alt="Вечерние клубы" loading="lazy">
+            <img src="neuchebka/clubs/5.jpg" alt="Вечерние клубы" loading="lazy">
+            <img src="neuchebka/clubs/6.jpg" alt="Вечерние клубы" loading="lazy">
+        </div>
+
+        <p class="back-link"><a href="activities.html" class="text-link">← Ко всей неучебке</a></p>
+
+    </div>
+
+    <footer>
+        <div class="footer-about">
+            <p class="footer-name">ЛМШ «Альтернатива» при ЦДОД</p>
+            <p>Областной профильный лагерь для старшеклассников</p>
+            <a href="admission.html">Записаться на собеседование</a>
+        </div>
+
+        <!-- Контакты: впиши настоящие ссылки и текст, ненужные строки удали -->
+        <div class="contacts" id="contacts">
+            <h2>Контакты</h2>
+            <dl>
+                <div><dt>ВКонтакте</dt><dd><a href="https://vk.com/" target="_blank">Название группы</a></dd></div>
+                <div><dt>Telegram</dt><dd><a href="https://t.me/" target="_blank">@канал</a></dd></div>
+                <div><dt>Почта</dt><dd><a href="mailto:">адрес почты</a></dd></div>
+                <div><dt>Телефон</dt><dd><a href="tel:+7">номер телефона</a></dd></div>
+            </dl>
+        </div>
+    </footer>
+
+</body>
+</html>

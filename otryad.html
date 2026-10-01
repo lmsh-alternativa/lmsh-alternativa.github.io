@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="only light">
+    <title>Отрядное время | ЛМШ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..800&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <!-- Просмотр фото крупно -->
+    <script src="photos.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-mark">Л<span>М</span>Ш</span>
+            <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
+        <nav id="site-nav" aria-label="Разделы сайта">
+            <a href="index.html">О нас</a>
+            <a href="study.html">Учебная часть</a>
+            <!-- Активный раздел отмечен aria-current -->
+            <a href="activities.html" aria-current="true">Неучебная часть</a>
+            <a href="history.html">История</a>
+            <a href="people.html">Люди</a>
+            <a href="admission.html">Собеседования</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <p class="kicker"><a href="activities.html">← Вся неучебка</a></p>
+        <h1>Отрядное время</h1>
+        <p>Уютная часть вечера, когда весь отряд собирается вместе.</p>
+    </section>
+
+    <!-- Фото отрядного времени удобно класть в папку neuchebka/otryad/ -->
+    <section class="split">
+        <div class="split-text">
+            <h2>Что это такое</h2>
+            <p>Важная и уютная часть вечера. Время, когда можно собраться всем отрядом, обсудить прошедший день, поделиться впечатлениями, поиграть в отрядные игры и просто пообщаться в кругу друзей.</p>
+            <p>Пара слов о том, как формируются отряды и кто их ведёт.</p>
+        </div>
+        <div class="split-image">
+            <img src="neuchebka/otryad/main.jpg" alt="Отрядное время">
+        </div>
+    </section>
+
+    <div class="container">
+
+        <h2>Как проходит вечер</h2>
+
+        <ol class="steps">
+            <li>
+                <h3>Обсуждение дня</h3>
+                <p>Собираемся всем отрядом, вспоминаем прошедший день и делимся впечатлениями.</p>
+            </li>
+            <li>
+                <h3>Отрядные игры</h3>
+                <p>Играем вместе: пара слов о том, во что обычно играют.</p>
+            </li>
+            <li>
+                <h3>Просто разговоры</h3>
+                <p>Время пообщаться в кругу друзей.</p>
+            </li>
+            <li>
+                <h3>Традиции</h3>
+                <p>Пара слов об отрядных традициях.</p>
+            </li>
+        </ol>
+
+        <h2>Отрядные игры</h2>
+
+        <!-- Чтобы добавить игру, скопируй блок <div> ... </div> внутри «cards» -->
+        <div class="cards">
+            <div>
+                <img src="neuchebka/otryad/igra-1.jpg" alt="" loading="lazy">
+                <h3>Название игры</h3>
+                <p>Как в неё играют — пара предложений.</p>
+            </div>
+            <div>
+                <img src="neuchebka/otryad/igra-2.jpg" alt="" loading="lazy">
+                <h3>Название игры</h3>
+                <p>Как в неё играют — пара предложений.</p>
+            </div>
+        </div>
+
+        <h2>Фото</h2>
+        <div class="photos">
+            <img src="neuchebka/otryad/1.jpg" alt="Отрядное время" loading="lazy">
+            <img src="neuchebka/otryad/2.jpg" alt="Отрядное время" loading="lazy">
+            <img src="neuchebka/otryad/3.jpg" alt="Отрядное время" loading="lazy">
+            <img src="neuchebka/otryad/4.jpg" alt="Отрядное время" loading="lazy">
+            <img src="neuchebka/otryad/5.jpg" alt="Отрядное время" loading="lazy">
+            <img src="neuchebka/otryad/6.jpg" alt="Отрядное время" loading="lazy">
+        </div>
+
+        <p class="back-link"><a href="activities.html" class="text-link">← Ко всей неучебке</a></p>
+
+    </div>
+
+    <footer>
+        <div class="footer-about">
+            <p class="footer-name">ЛМШ «Альтернатива» при ЦДОД</p>
+            <p>Областной профильный лагерь для старшеклассников</p>
+            <a href="admission.html">Записаться на собеседование</a>
+        </div>
+
+        <!-- Контакты: впиши настоящие ссылки и текст, ненужные строки удали -->
+        <div class="contacts" id="contacts">
+            <h2>Контакты</h2>
+            <dl>
+                <div><dt>ВКонтакте</dt><dd><a href="https://vk.com/" target="_blank">Название группы</a></dd></div>
+                <div><dt>Telegram</dt><dd><a href="https://t.me/" target="_blank">@канал</a></dd></div>
+                <div><dt>Почта</dt><dd><a href="mailto:">адрес почты</a></dd></div>
+                <div><dt>Телефон</dt><dd><a href="tel:+7">номер телефона</a></dd></div>
+            </dl>
+        </div>
+    </footer>
+
+</body>
+</html>

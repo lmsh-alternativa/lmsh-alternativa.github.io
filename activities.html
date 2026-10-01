@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#fffdf8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="only light">
     <title>Неучебная часть | ЛМШ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,7 @@
 
     <header>
         <a href="index.html" class="logo">
-            <span class="logo-mark">ЛМШ</span>
+            <span class="logo-mark">Л<span>М</span>Ш</span>
             <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
@@ -25,62 +26,64 @@
             <!-- Активный раздел отмечен aria-current -->
             <a href="activities.html" aria-current="page">Неучебная часть</a>
             <a href="history.html">История</a>
+            <a href="people.html">Люди</a>
             <a href="admission.html">Собеседования</a>
         </nav>
     </header>
 
     <section class="page-header">
         <h1>Неучебная часть</h1>
-        <p>Кратко о главном: вечерние клубы, отрядное время, Игрушка и творчество.</p>
+        <p>Лучший отдых - это смена деятельности. Вторая половина дня и вечера - это Игрушка, клубы, отрядное время, игры и творчество.</p>
     </section>
 
-    <!-- Блок 1: Клубы -->
-    <section class="split">
-        <div class="split-text">
-            <h2>Вечерние клубы</h2>
-            <p>Каждый вечер работают площадки по интересам: настольные игры, гитара, кинопоказы и дискуссионные клубы. Любой желающий может найти занятие по душе или организовать что-то своё.</p>
-        </div>
-        <div class="split-image">
-            <!-- Место для первой фотографии -->
-            <img src="ССЫЛКА_НА_ФОТО_1.jpg" alt="Вечерние клубы">
-        </div>
-    </section>
+    <div class="container">
 
-    <!-- Блок 2: Отрядное время (split--reverse меняет текст и фото местами) -->
-    <section class="split split--reverse">
-        <div class="split-text">
-            <h2>Отрядное время</h2>
-            <p>Важная и уютная часть вечера. Время, когда можно собраться всем отрядом, обсудить прошедший день, поделиться впечатлениями, поиграть в отрядные игры и просто пообщаться в кругу друзей.</p>
-        </div>
-        <div class="split-image">
-            <!-- Место для второй фотографии -->
-            <img src="ССЫЛКА_НА_ФОТО_2.jpg" alt="Отрядное время">
-        </div>
-    </section>
+        <!-- Игрушка — первая и самая крупная.
+             Обложки разделов лежат в папке neuchebka/ -->
+        <a href="igrushka.html" class="feature-card">
+            <img src="neuchebka/igrushka.jpg" alt="">
+            <div class="feature-card-text">
+                <p class="kicker">Большая игра</p>
+                <h2>Игрушка</h2>
+                <p>Это не просто классическая беготня по станциям, а масштабное событие на всей территории лагеря. Мы придумываем необычный сюжет, интересные механики и нестандартные задания, чтобы каждый раз удивлять участников.</p>
+                <span class="read-more">подробнее →</span>
+            </div>
+        </a>
 
-    <!-- Блок 3: Игры и творчество -->
-    <section class="split">
-        <div class="split-text">
-            <h2>Интеллектуальные игры и творчество</h2>
-            <p>Мы проводим турниры по «Что? Где? Когда?» и различным квизам. А на творческих вечерах можно проявить себя в театральных постановках.</p>
-        </div>
-        <div class="split-image">
-            <!-- Место для третьей фотографии -->
-            <img src="ССЫЛКА_НА_ФОТО_3.jpg" alt="Интеллектуальные игры и творчество">
-        </div>
-    </section>
+        <div class="activity-grid">
+            <a href="clubs.html" class="activity-card">
+                <img src="neuchebka/clubs.jpg" alt="">
+                <div class="activity-card-text">
+                    <h3>Вечерние клубы</h3>
+                    <p>Каждый вечер работают площадки по интересам: настольные игры, гитара, кинопоказы и дискуссионные клубы. Можно найти занятие по душе или организовать что-то своё.</p>
+                    <span class="read-more">подробнее →</span>
+                </div>
+            </a>
 
-    <!-- Блок 4: Игрушка (split--reverse для шахматного порядка) -->
-    <section class="split split--reverse">
-        <div class="split-text">
-            <h2>Игрушка</h2>
-            <p>Это не просто классическая беготня по станциям, а масштабное событие на всей территории лагеря. Мы придумываем необычный сюжет, интересные механики и нестандартные задания, чтобы каждый раз удивлять участников.</p>
+            <a href="otryad.html" class="activity-card">
+                <img src="neuchebka/otryad.jpg" alt="">
+                <div class="activity-card-text">
+                    <h3>Отрядное время</h3>
+                    <p>Уютная часть вечера: весь отряд собирается вместе, чтобы обсудить день, поиграть в отрядные игры и просто пообщаться.</p>
+                    <span class="read-more">подробнее →</span>
+                </div>
+            </a>
         </div>
-        <div class="split-image">
-            <!-- Место для четвертой фотографии -->
-            <img src="ССЫЛКА_НА_ФОТО_4.jpg" alt="Игрушка">
+
+        <h2>А ещё</h2>
+
+        <div class="info-blocks">
+            <div class="info-block">
+                <h3>Интеллектуальные игры</h3>
+                <p>Мы проводим турниры по «Что? Где? Когда?» и различным квизам.</p>
+            </div>
+            <div class="info-block">
+                <h3>Творческие вечера</h3>
+                <p>На творческих вечерах можно проявить себя в театральных постановках.</p>
+            </div>
         </div>
-    </section>
+
+    </div>
 
     <footer>
         <div class="footer-about">

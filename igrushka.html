@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="only light">
+    <title>Игрушка | ЛМШ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..800&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
+    <!-- Просмотр фото крупно -->
+    <script src="photos.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">
+            <span class="logo-mark">Л<span>М</span>Ш</span>
+            <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
+        <nav id="site-nav" aria-label="Разделы сайта">
+            <a href="index.html">О нас</a>
+            <a href="study.html">Учебная часть</a>
+            <!-- Активный раздел отмечен aria-current -->
+            <a href="activities.html" aria-current="true">Неучебная часть</a>
+            <a href="history.html">История</a>
+            <a href="people.html">Люди</a>
+            <a href="admission.html">Собеседования</a>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <p class="kicker"><a href="activities.html">← Вся неучебка</a></p>
+        <h1>Игрушка</h1>
+        <p>Большая игра на всю территорию лагеря: каждый раз новый сюжет, механики и задания.</p>
+    </section>
+
+    <!-- Фото Игрушки удобно класть в папку neuchebka/igrushka/ -->
+    <section class="split">
+        <div class="split-text">
+            <h2>Что это такое</h2>
+            <p>Это не просто классическая беготня по станциям, а масштабное событие на всей территории лагеря. Мы придумываем необычный сюжет, интересные механики и нестандартные задания, чтобы каждый раз удивлять участников.</p>
+            <p>Пара слов о том, сколько длится Игрушка, кто в ней играет и почему её ждут всю смену.</p>
+        </div>
+        <div class="split-image">
+            <img src="neuchebka/igrushka/main.jpg" alt="Игрушка">
+        </div>
+    </section>
+
+    <div class="container">
+
+        <h2>Как это устроено</h2>
+
+        <!-- Пунктов может быть сколько угодно: номера проставятся сами -->
+        <ol class="steps">
+            <li>
+                <h3>Сюжет</h3>
+                <p>Каждый раз новый мир и новая история. Пара слов о том, как игроки узнают легенду.</p>
+            </li>
+            <li>
+                <h3>Команды</h3>
+                <p>Как делятся на команды и сколько в них человек.</p>
+            </li>
+            <li>
+                <h3>Механики</h3>
+                <p>Что делают игроки: пара примеров заданий и необычных механик.</p>
+            </li>
+            <li>
+                <h3>Финал</h3>
+                <p>Чем заканчивается игра и как определяют победителей.</p>
+            </li>
+        </ol>
+
+        <h2>Игрушки прошлых лет</h2>
+
+        <!-- Чтобы добавить год, скопируй блок <article class="example"> ... </article>.
+             Фото года удобно класть в папку neuchebka/igrushka/ГОД/ -->
+        <article class="example">
+            <h3>2026 — «Название Игрушки»</h3>
+            <p>Сюжет в двух словах, самые яркие моменты и чем всё закончилось.</p>
+            <div class="photos">
+                <img src="neuchebka/igrushka/2026/1.jpg" alt="Игрушка 2026" loading="lazy">
+                <img src="neuchebka/igrushka/2026/2.jpg" alt="Игрушка 2026" loading="lazy">
+                <img src="neuchebka/igrushka/2026/3.jpg" alt="Игрушка 2026" loading="lazy">
+                <img src="neuchebka/igrushka/2026/4.jpg" alt="Игрушка 2026" loading="lazy">
+            </div>
+        </article>
+
+        <article class="example">
+            <h3>2025 — «Название Игрушки»</h3>
+            <p>Сюжет в двух словах, самые яркие моменты и чем всё закончилось.</p>
+            <div class="photos">
+                <img src="neuchebka/igrushka/2025/1.jpg" alt="Игрушка 2025" loading="lazy">
+                <img src="neuchebka/igrushka/2025/2.jpg" alt="Игрушка 2025" loading="lazy">
+                <img src="neuchebka/igrushka/2025/3.jpg" alt="Игрушка 2025" loading="lazy">
+                <img src="neuchebka/igrushka/2025/4.jpg" alt="Игрушка 2025" loading="lazy">
+            </div>
+        </article>
+
+        <article class="example">
+            <h3>2024 — «Название Игрушки»</h3>
+            <p>Сюжет в двух словах, самые яркие моменты и чем всё закончилось.</p>
+            <div class="photos">
+                <img src="neuchebka/igrushka/2024/1.jpg" alt="Игрушка 2024" loading="lazy">
+                <img src="neuchebka/igrushka/2024/2.jpg" alt="Игрушка 2024" loading="lazy">
+                <img src="neuchebka/igrushka/2024/3.jpg" alt="Игрушка 2024" loading="lazy">
+                <img src="neuchebka/igrushka/2024/4.jpg" alt="Игрушка 2024" loading="lazy">
+            </div>
+        </article>
+
+        <p class="back-link"><a href="activities.html" class="text-link">← Ко всей неучебке</a></p>
+
+    </div>
+
+    <footer>
+        <div class="footer-about">
+            <p class="footer-name">ЛМШ «Альтернатива» при ЦДОД</p>
+            <p>Областной профильный лагерь для старшеклассников</p>
+            <a href="admission.html">Записаться на собеседование</a>
+        </div>
+
+        <!-- Контакты: впиши настоящие ссылки и текст, ненужные строки удали -->
+        <div class="contacts" id="contacts">
+            <h2>Контакты</h2>
+            <dl>
+                <div><dt>ВКонтакте</dt><dd><a href="https://vk.com/" target="_blank">Название группы</a></dd></div>
+                <div><dt>Telegram</dt><dd><a href="https://t.me/" target="_blank">@канал</a></dd></div>
+                <div><dt>Почта</dt><dd><a href="mailto:">адрес почты</a></dd></div>
+                <div><dt>Телефон</dt><dd><a href="tel:+7">номер телефона</a></dd></div>
+            </dl>
+        </div>
+    </footer>
+
+</body>
+</html>

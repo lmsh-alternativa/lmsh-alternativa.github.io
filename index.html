@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#fffdf8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="only light">
     <title>Главная | ЛМШ</title>
     <!-- Шрифт Golos Text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,7 +18,7 @@
 
     <header>
         <a href="index.html" class="logo">
-            <span class="logo-mark">ЛМШ</span>
+            <span class="logo-mark">Л<span>М</span>Ш</span>
             <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
@@ -26,6 +27,7 @@
             <a href="study.html">Учебная часть</a>
             <a href="activities.html">Неучебная часть</a>
             <a href="history.html">История</a>
+            <a href="people.html">Люди</a>
             <a href="admission.html">Собеседования</a>
         </nav>
     </header>
@@ -68,8 +70,11 @@
         </div>
     </section>
 
+    <!-- Три больших блока подряд — цветные полосы во всю ширину,
+         у каждого свой цвет логотипа: band--teal, band--ink (чёрный), band--pink -->
+
     <!-- Учебная часть -->
-    <section class="split">
+    <section class="split band band--teal">
         <div class="split-text">
             <h2>Учебная часть</h2>
             <p>Мы рассказываем о науке так, как это не делают в школе. Три пары каждый день, свобода в выборе курсов и разные уровни сложности - от ликбезов до олимпиадных пар.</p>
@@ -87,11 +92,17 @@
     </section>
 
     <!-- Неучебная часть (на компьютере картинка слева, текст справа) -->
-    <section class="split split--reverse band">
+    <section class="split split--reverse band band--ink">
         <div class="split-text">
             <h2>Неучебная часть</h2>
             <p>Лучший отдых - это смена деятельности. Во второй половине дня тебя ждут клубы по интересам, спортивные турниры, интеллектуальные игры и уникальные форматы наших больших интерактивов.</p>
-            <a href="activities.html" class="btn btn-dark">Узнать больше об отдыхе</a>
+
+            <ul class="link-list">
+                <li><a href="igrushka.html">Игрушка</a></li>
+                <li><a href="clubs.html">Вечерние клубы</a></li>
+                <li><a href="otryad.html">Отрядное время</a></li>
+            </ul>
+            <a href="activities.html" class="btn">Вся неучебка</a>
         </div>
         <div class="split-image">
             <img src="ФОТО_ОТДЫХ.jpg" alt="Неучебная часть">
@@ -99,7 +110,7 @@
     </section>
 
     <!-- Фотогалерея -->
-    <section class="section">
+    <section class="section band band--pink">
         <h2>Атмосфера ЛМШ</h2>
         <div class="gallery">
             <img src="ФОТО_ГАЛЕРЕЯ_1.jpg" alt="Атмосфера лагеря 1">
@@ -109,12 +120,48 @@
         </div>
     </section>
 
+    <!-- Ближайшая смена: руководство и ссылка на прошлые смены.
+         Если фото нет, строку <img> можно удалить — блок подстроится.
+         Когда смена пройдёт, перенеси её в «Историю» и поменяй тут год. -->
+    <section class="section">
+        <div class="next-shift-head">
+            <p class="kicker">Следующая смена</p>
+            <h2>Смена 2027</h2>
+            <p>Пара слов о смене: даты, что нового, когда начнутся собеседования.</p>
+        </div>
+
+        <ul class="team">
+            <li>
+                <img src="smeny/2027/director.jpg" alt="" loading="lazy">
+                <span class="role">Директор</span>
+                <span class="team-name">Имя Фамилия</span>
+            </li>
+            <li>
+                <img src="smeny/2027/zamdir.jpg" alt="" loading="lazy">
+                <span class="role">Замдиректора</span>
+                <span class="team-name">Имя Фамилия</span>
+            </li>
+            <li>
+                <img src="smeny/2027/zavuch.jpg" alt="" loading="lazy">
+                <span class="role">Завуч</span>
+                <span class="team-name">Имя Фамилия</span>
+            </li>
+            <li>
+                <img src="smeny/2027/zavneuch.jpg" alt="" loading="lazy">
+                <span class="role">Завнеуч</span>
+                <span class="team-name">Имя Фамилия</span>
+            </li>
+        </ul>
+
+        <a href="history.html" class="btn btn-dark">Другие смены</a>
+    </section>
+
     <!-- Собеседования -->
     <section class="cta">
         <div>
             <h2>Присоединяйся к нам</h2>
             <p>Готов стать частью ЛМШ? Мы проводим очные собеседования в Туле и Ефремове, а также онлайн-встречи для тех, кто из других городов. Это простое знакомство, а не экзамен!</p>
-            <a href="admission.html" class="btn btn-dark">Записаться на собеседование</a>
+            <a href="admission.html" class="btn">Записаться на собеседование</a>
         </div>
         <img src="ФОТО_СОБЕСЕДОВАНИЕ.jpg" alt="Запись в ЛМШ">
     </section>

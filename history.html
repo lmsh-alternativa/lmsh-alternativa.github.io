@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#fffdf8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="only light">
     <title>История | ЛМШ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,12 +13,13 @@
     <script src="menu.js" defer></script>
     <!-- Ссылки на годы и просмотр фото крупно -->
     <script src="history.js" defer></script>
+    <script src="photos.js" defer></script>
 </head>
 <body>
 
     <header>
         <a href="index.html" class="logo">
-            <span class="logo-mark">ЛМШ</span>
+            <span class="logo-mark">Л<span>М</span>Ш</span>
             <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
@@ -27,13 +29,14 @@
             <a href="activities.html">Неучебная часть</a>
             <!-- Активный раздел отмечен aria-current -->
             <a href="history.html" aria-current="page">История</a>
+            <a href="people.html">Люди</a>
             <a href="admission.html">Собеседования</a>
         </nav>
     </header>
 
     <section class="page-header">
         <h1>История ЛМШ</h1>
-        <p>Прошлые смены: фотографии, директора и истории.</p>
+        <p>Прошлые смены: кто их вёл, фотографии и истории.</p>
     </section>
 
     <div class="container">
@@ -45,23 +48,42 @@
             КАК ДОБАВИТЬ СМЕНУ
             1. Скопируй блок <article> ... </article> целиком и вставь его над самой свежей сменой.
             2. Поменяй год в id="smena-ГОД" и в заголовке.
-            3. Впиши директора, рассказ и пути к фото. Фото смены удобно класть в папку smeny/ГОД/.
-               Фото можно добавлять сколько угодно — сетка подстроится сама.
+            3. Впиши руководство смены (директор, замдиректора, завуч, завнеуч), рассказ и пути к фото.
+               Фото смены удобно класть в папку smeny/ГОД/. Если чьего-то фото нет,
+               строку <img> можно удалить — блок подстроится.
+               Фото смены можно добавлять сколько угодно — сетка подстроится сама.
+            4. Остальной педсостав вписывать сюда не нужно: ссылка «Весь педсостав смены»
+               ведёт на страницу «Люди», где люди отбираются по годам автоматически.
             Блоков «заголовок истории + текст» (<h3> + <p>) тоже может быть сколько угодно.
         -->
 
         <!-- ===== Смена 2026 ===== -->
         <article class="shift" id="smena-2026">
-            <div class="shift-head">
-                <h2>Смена 2026</h2>
-                <div class="director">
-                    <img src="smeny/2026/director.jpg" alt="Директор смены 2026">
-                    <div>
-                        <span class="role">Директор смены</span>
-                        <p class="director-name">Имя Фамилия</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Смена 2026</h2>
+
+            <ul class="team">
+                <li>
+                    <img src="smeny/2026/director.jpg" alt="" loading="lazy">
+                    <span class="role">Директор</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2026/zamdir.jpg" alt="" loading="lazy">
+                    <span class="role">Замдиректора</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2026/zavuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2026/zavneuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завнеуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+            </ul>
+            <p class="team-more"><a href="people.html?year=2026" class="text-link">Весь педсостав смены 2026 →</a></p>
 
             <div class="shift-story">
                 <p>Пара слов о смене: чем она запомнилась, какой была Игрушка, какие появились традиции.</p>
@@ -81,16 +103,31 @@
 
         <!-- ===== Смена 2025 ===== -->
         <article class="shift" id="smena-2025">
-            <div class="shift-head">
-                <h2>Смена 2025</h2>
-                <div class="director">
-                    <img src="smeny/2025/director.jpg" alt="Директор смены 2025">
-                    <div>
-                        <span class="role">Директор смены</span>
-                        <p class="director-name">Имя Фамилия</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Смена 2025</h2>
+
+            <ul class="team">
+                <li>
+                    <img src="smeny/2025/director.jpg" alt="" loading="lazy">
+                    <span class="role">Директор</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2025/zamdir.jpg" alt="" loading="lazy">
+                    <span class="role">Замдиректора</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2025/zavuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2025/zavneuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завнеуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+            </ul>
+            <p class="team-more"><a href="people.html?year=2025" class="text-link">Весь педсостав смены 2025 →</a></p>
 
             <div class="shift-story">
                 <p>Пара слов о смене: чем она запомнилась, какой была Игрушка, какие появились традиции.</p>
@@ -106,16 +143,31 @@
 
         <!-- ===== Смена 2024 ===== -->
         <article class="shift" id="smena-2024">
-            <div class="shift-head">
-                <h2>Смена 2024</h2>
-                <div class="director">
-                    <img src="smeny/2024/director.jpg" alt="Директор смены 2024" loading="lazy">
-                    <div>
-                        <span class="role">Директор смены</span>
-                        <p class="director-name">Имя Фамилия</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Смена 2024</h2>
+
+            <ul class="team">
+                <li>
+                    <img src="smeny/2024/director.jpg" alt="" loading="lazy">
+                    <span class="role">Директор</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2024/zamdir.jpg" alt="" loading="lazy">
+                    <span class="role">Замдиректора</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2024/zavuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2024/zavneuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завнеуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+            </ul>
+            <p class="team-more"><a href="people.html?year=2024" class="text-link">Весь педсостав смены 2024 →</a></p>
 
             <div class="shift-story">
                 <p>Пара слов о смене: чем она запомнилась, какой была Игрушка, какие появились традиции.</p>
@@ -131,16 +183,31 @@
 
         <!-- ===== Смена 2023 ===== -->
         <article class="shift" id="smena-2023">
-            <div class="shift-head">
-                <h2>Смена 2023</h2>
-                <div class="director">
-                    <img src="smeny/2023/director.jpg" alt="Директор смены 2023" loading="lazy">
-                    <div>
-                        <span class="role">Директор смены</span>
-                        <p class="director-name">Имя Фамилия</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Смена 2023</h2>
+
+            <ul class="team">
+                <li>
+                    <img src="smeny/2023/director.jpg" alt="" loading="lazy">
+                    <span class="role">Директор</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2023/zamdir.jpg" alt="" loading="lazy">
+                    <span class="role">Замдиректора</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2023/zavuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2023/zavneuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завнеуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+            </ul>
+            <p class="team-more"><a href="people.html?year=2023" class="text-link">Весь педсостав смены 2023 →</a></p>
 
             <div class="shift-story">
                 <p>Пара слов о смене: чем она запомнилась, какой была Игрушка, какие появились традиции.</p>
@@ -156,16 +223,31 @@
 
         <!-- ===== Смена 2022 ===== -->
         <article class="shift" id="smena-2022">
-            <div class="shift-head">
-                <h2>Смена 2022</h2>
-                <div class="director">
-                    <img src="smeny/2022/director.jpg" alt="Директор смены 2022" loading="lazy">
-                    <div>
-                        <span class="role">Директор смены</span>
-                        <p class="director-name">Имя Фамилия</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Смена 2022</h2>
+
+            <ul class="team">
+                <li>
+                    <img src="smeny/2022/director.jpg" alt="" loading="lazy">
+                    <span class="role">Директор</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2022/zamdir.jpg" alt="" loading="lazy">
+                    <span class="role">Замдиректора</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2022/zavuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2022/zavneuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завнеуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+            </ul>
+            <p class="team-more"><a href="people.html?year=2022" class="text-link">Весь педсостав смены 2022 →</a></p>
 
             <div class="shift-story">
                 <p>Пара слов о смене: чем она запомнилась, какой была Игрушка, какие появились традиции.</p>
@@ -181,16 +263,31 @@
 
         <!-- ===== Смена 2021 ===== -->
         <article class="shift" id="smena-2021">
-            <div class="shift-head">
-                <h2>Смена 2021</h2>
-                <div class="director">
-                    <img src="smeny/2021/director.jpg" alt="Директор смены 2021" loading="lazy">
-                    <div>
-                        <span class="role">Директор смены</span>
-                        <p class="director-name">Имя Фамилия</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Смена 2021</h2>
+
+            <ul class="team">
+                <li>
+                    <img src="smeny/2021/director.jpg" alt="" loading="lazy">
+                    <span class="role">Директор</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2021/zamdir.jpg" alt="" loading="lazy">
+                    <span class="role">Замдиректора</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2021/zavuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2021/zavneuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завнеуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+            </ul>
+            <p class="team-more"><a href="people.html?year=2021" class="text-link">Весь педсостав смены 2021 →</a></p>
 
             <div class="shift-story">
                 <p>Пара слов о смене: чем она запомнилась, какой была Игрушка, какие появились традиции.</p>
@@ -206,16 +303,31 @@
 
         <!-- ===== Смена 2020 — ковидный год (штамп «Ковид» у заголовка) ===== -->
         <article class="shift" id="smena-2020">
-            <div class="shift-head">
-                <h2>Смена 2020 <span class="stamp">Ковид</span></h2>
-                <div class="director">
-                    <img src="smeny/2020/director.jpg" alt="Директор смены 2020" loading="lazy">
-                    <div>
-                        <span class="role">Директор смены</span>
-                        <p class="director-name">Имя Фамилия</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Смена 2020 <span class="stamp">Ковид</span></h2>
+
+            <ul class="team">
+                <li>
+                    <img src="smeny/2020/director.jpg" alt="" loading="lazy">
+                    <span class="role">Директор</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2020/zamdir.jpg" alt="" loading="lazy">
+                    <span class="role">Замдиректора</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2020/zavuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2020/zavneuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завнеуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+            </ul>
+            <p class="team-more"><a href="people.html?year=2020" class="text-link">Весь педсостав смены 2020 →</a></p>
 
             <div class="shift-story">
                 <p>Ковидный 2020-й: маски, самоизоляция и дистанционка вместо обычной школы.</p>
@@ -232,16 +344,31 @@
 
         <!-- ===== Смена 2019 ===== -->
         <article class="shift" id="smena-2019">
-            <div class="shift-head">
-                <h2>Смена 2019</h2>
-                <div class="director">
-                    <img src="smeny/2019/director.jpg" alt="Директор смены 2019" loading="lazy">
-                    <div>
-                        <span class="role">Директор смены</span>
-                        <p class="director-name">Имя Фамилия</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Смена 2019</h2>
+
+            <ul class="team">
+                <li>
+                    <img src="smeny/2019/director.jpg" alt="" loading="lazy">
+                    <span class="role">Директор</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2019/zamdir.jpg" alt="" loading="lazy">
+                    <span class="role">Замдиректора</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2019/zavuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2019/zavneuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завнеуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+            </ul>
+            <p class="team-more"><a href="people.html?year=2019" class="text-link">Весь педсостав смены 2019 →</a></p>
 
             <div class="shift-story">
                 <p>Пара слов о смене: чем она запомнилась, какой была Игрушка, какие появились традиции.</p>
@@ -257,16 +384,31 @@
 
         <!-- ===== Смена 2018 ===== -->
         <article class="shift" id="smena-2018">
-            <div class="shift-head">
-                <h2>Смена 2018</h2>
-                <div class="director">
-                    <img src="smeny/2018/director.jpg" alt="Директор смены 2018" loading="lazy">
-                    <div>
-                        <span class="role">Директор смены</span>
-                        <p class="director-name">Имя Фамилия</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Смена 2018</h2>
+
+            <ul class="team">
+                <li>
+                    <img src="smeny/2018/director.jpg" alt="" loading="lazy">
+                    <span class="role">Директор</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2018/zamdir.jpg" alt="" loading="lazy">
+                    <span class="role">Замдиректора</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2018/zavuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2018/zavneuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завнеуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+            </ul>
+            <p class="team-more"><a href="people.html?year=2018" class="text-link">Весь педсостав смены 2018 →</a></p>
 
             <div class="shift-story">
                 <p>Пара слов о смене: чем она запомнилась, какой была Игрушка, какие появились традиции.</p>
@@ -282,16 +424,31 @@
 
         <!-- ===== Смена 2017 ===== -->
         <article class="shift" id="smena-2017">
-            <div class="shift-head">
-                <h2>Смена 2017</h2>
-                <div class="director">
-                    <img src="smeny/2017/director.jpg" alt="Директор смены 2017" loading="lazy">
-                    <div>
-                        <span class="role">Директор смены</span>
-                        <p class="director-name">Имя Фамилия</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Смена 2017</h2>
+
+            <ul class="team">
+                <li>
+                    <img src="smeny/2017/director.jpg" alt="" loading="lazy">
+                    <span class="role">Директор</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2017/zamdir.jpg" alt="" loading="lazy">
+                    <span class="role">Замдиректора</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2017/zavuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2017/zavneuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завнеуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+            </ul>
+            <p class="team-more"><a href="people.html?year=2017" class="text-link">Весь педсостав смены 2017 →</a></p>
 
             <div class="shift-story">
                 <p>Пара слов о смене: чем она запомнилась, какой была Игрушка, какие появились традиции.</p>
@@ -307,16 +464,31 @@
 
         <!-- ===== Смена 2016 ===== -->
         <article class="shift" id="smena-2016">
-            <div class="shift-head">
-                <h2>Смена 2016</h2>
-                <div class="director">
-                    <img src="smeny/2016/director.jpg" alt="Директор смены 2016" loading="lazy">
-                    <div>
-                        <span class="role">Директор смены</span>
-                        <p class="director-name">Имя Фамилия</p>
-                    </div>
-                </div>
-            </div>
+            <h2>Смена 2016</h2>
+
+            <ul class="team">
+                <li>
+                    <img src="smeny/2016/director.jpg" alt="" loading="lazy">
+                    <span class="role">Директор</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2016/zamdir.jpg" alt="" loading="lazy">
+                    <span class="role">Замдиректора</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2016/zavuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+                <li>
+                    <img src="smeny/2016/zavneuch.jpg" alt="" loading="lazy">
+                    <span class="role">Завнеуч</span>
+                    <span class="team-name">Имя Фамилия</span>
+                </li>
+            </ul>
+            <p class="team-more"><a href="people.html?year=2016" class="text-link">Весь педсостав смены 2016 →</a></p>
 
             <div class="shift-story">
                 <p>Пара слов о смене: чем она запомнилась, какой была Игрушка, какие появились традиции.</p>

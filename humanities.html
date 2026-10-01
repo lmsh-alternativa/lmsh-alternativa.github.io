@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#fffdf8">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="color-scheme" content="only light">
     <title>Кафедра гуманитарных наук | ЛМШ</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +16,7 @@
 
     <header>
         <a href="index.html" class="logo">
-            <span class="logo-mark">ЛМШ</span>
+            <span class="logo-mark">Л<span>М</span>Ш</span>
             <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
         </a>
         <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
@@ -24,6 +25,7 @@
             <a href="study.html" aria-current="true">Учебная часть</a>
             <a href="activities.html">Неучебная часть</a>
             <a href="history.html">История</a>
+            <a href="people.html">Люди</a>
             <a href="admission.html">Собеседования</a>
         </nav>
     </header>
@@ -70,40 +72,9 @@
             </div>
         </div>
 
-        <!-- Олды кафедры: те, кто преподавал на прошлых сменах.
-             Чтобы добавить человека, скопируй строку <li> ... </li>.
-             Если фото нет, строку <img> можно удалить — блок подстроится.
-             Годы — смены, на которых он преподавал. -->
-        <section class="alumni">
-            <h2>Олды кафедры</h2>
-            <p class="alumni-intro">Преподавали на кафедре в прошлые смены.</p>
-            <ul class="alumni-list">
-                <li>
-                    <img src="ФОТО_ГУМ_ОЛД_1.jpg" alt="Олд кафедры гуманитарных наук" loading="lazy">
-                    <span class="alumni-name">Имя Фамилия</span>
-                    <span class="alumni-years">2016–2019</span>
-                    <span class="alumni-subjects">Право</span>
-                </li>
-                <li>
-                    <img src="ФОТО_ГУМ_ОЛД_2.jpg" alt="Олд кафедры гуманитарных наук" loading="lazy">
-                    <span class="alumni-name">Имя Фамилия</span>
-                    <span class="alumni-years">2017, 2019</span>
-                    <span class="alumni-subjects">История мировых цивилизаций</span>
-                </li>
-                <li>
-                    <img src="ФОТО_ГУМ_ОЛД_3.jpg" alt="Олд кафедры гуманитарных наук" loading="lazy">
-                    <span class="alumni-name">Имя Фамилия</span>
-                    <span class="alumni-years">2018–2022</span>
-                    <span class="alumni-subjects">Поэзия Серебряного века</span>
-                </li>
-                <li>
-                    <img src="ФОТО_ГУМ_ОЛД_4.jpg" alt="Олд кафедры гуманитарных наук" loading="lazy">
-                    <span class="alumni-name">Имя Фамилия</span>
-                    <span class="alumni-years">2021–2023</span>
-                    <span class="alumni-subjects">Античная философия</span>
-                </li>
-            </ul>
-        </section>
+        <!-- Преподаватели прошлых смен — в общем списке на странице «Люди» (people.html).
+             Новых людей добавляй туда же: фильтр по кафедре соберёт их сам. -->
+        <p class="pool-link"><a href="people.html?dept=Гуманитарные+науки" class="text-link">Все преподаватели кафедры за все годы →</a></p>
 
         <a href="study.html" class="text-link">← К списку кафедр</a>
     </div>
