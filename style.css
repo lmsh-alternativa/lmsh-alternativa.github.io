@@ -846,6 +846,69 @@ header nav {
         }
 }
 
+/* Олды кафедры: преподаватели прошлых смен.
+   Отдельный серый блок и компактный список, чтобы не путать с командой этого года */
+.alumni {
+    margin: 16px 0 40px;
+    padding: 28px 18px;
+    background: var(--paper-2);
+    border-radius: 8px;
+}
+
+    .alumni h2 {
+        margin-bottom: 6px;
+        font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
+    }
+
+.alumni-intro {
+    margin-bottom: 20px;
+    color: var(--muted);
+}
+
+.alumni-list {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--line);
+}
+
+    .alumni-list li {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-content: start;
+        gap: 2px 12px;
+        padding: 12px 0;
+        border-bottom: 1px solid var(--line);
+    }
+
+.alumni-name {
+    font-weight: 700;
+}
+
+.alumni-years {
+    color: var(--pink-ink);
+    font-weight: 600;
+    text-align: right;
+}
+
+.alumni-subjects {
+    grid-column: 1 / -1;
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+@media (min-width: 760px) {
+    .alumni {
+        padding: 40px;
+    }
+
+    .alumni-list {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 32px;
+    }
+}
+
 /* =========================================
    ИСТОРИЯ: ПРОШЛЫЕ СМЕНЫ
    ========================================= */
