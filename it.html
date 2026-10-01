@@ -3,47 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fffdf8">
     <title>Кафедра информатики | ЛМШ</title>
-    <!-- Подключение иконок -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Подключение стилей -->
+    <!-- Шрифт Golos Text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..800&display=swap">
+    <!-- Подключение стилей и меню для телефона -->
     <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">ЛМШ «Альтернатива» при ЦДОД</a>
-        <nav>
+        <a href="index.html" class="logo">
+            <span class="logo-mark">ЛМШ</span>
+            <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
+        <nav id="site-nav" aria-label="Разделы сайта">
             <a href="index.html">О нас</a>
-            <a href="study.html" style="color: var(--accent-teal);">Учебная часть</a>
+            <a href="study.html" aria-current="true">Учебная часть</a>
             <a href="activities.html">Неучебная часть</a>
             <a href="admission.html">Собеседования</a>
         </nav>
     </header>
 
     <section class="page-header">
+        <p class="kicker"><a href="study.html">← Все кафедры</a></p>
         <h1>Кафедра информатики</h1>
         <p>Алгоритмы, структуры данных, промышленная разработка и создание веб-приложений.</p>
     </section>
 
     <div class="container">
-        
+
         <!-- Блок: Заведующий кафедрой -->
         <div class="head-of-dept">
             <img src="ФОТО_ЗАВ_КАФЕДРЫ.jpg" alt="Заведующий кафедрой">
             <div class="head-info">
-                <span class="badge">Заведующий кафедрой</span>
+                <span class="role">Заведующий кафедрой</span>
                 <h2>Имя Фамилия</h2>
                 <p>Краткая биография заведующего. Например: Выпускник ведущего технического вуза, разработчик с многолетним стажем. Руководит кафедрой, составляет учебную программу и ведет продвинутые курсы по алгоритмам.</p>
-                <p style="color: var(--accent-teal); font-weight: 600; margin-top: 10px;">
-                    <i class="fas fa-book"></i> Основные курсы: Олимпиадное программирование, Архитектура БД
-                </p>
+                <p class="courses"><strong>Основные курсы:</strong> Олимпиадное программирование, Архитектура БД</p>
             </div>
         </div>
 
         <!-- Блок: Преподаватели (Сетка) -->
-        <h2 style="text-align: center; margin-bottom: 40px; border-bottom: none;">Команда преподавателей</h2>
-        
+        <h2>Команда преподавателей</h2>
+
         <div class="teachers-grid">
             <!-- Карточка преподавателя 1 -->
             <div class="teacher-card">
@@ -68,16 +75,19 @@
                 <div class="teacher-subjects">Информационная безопасность</div>
                 <p>Покажет, как работают сети, научит основам криптографии и базовым принципам защиты данных.</p>
             </div>
-            
+
             <!-- Добавляй новые карточки <div class="teacher-card">...</div> сюда по мере необходимости -->
         </div>
 
-        <!-- Кнопка возврата к списку кафедр -->
-        <div style="text-align: center; margin-top: 40px;">
-            <a href="study.html" class="btn" style="background-color: var(--secondary-bg); color: var(--text-main); box-shadow: none; border: 1px solid rgba(255,255,255,0.1);">← К списку кафедр</a>
-        </div>
+        <!-- Ссылка возврата к списку кафедр -->
+        <a href="study.html" class="text-link">← К списку кафедр</a>
 
     </div>
+
+    <footer>
+        <span>ЛМШ «Альтернатива» при ЦДОД</span>
+        <a href="admission.html">Записаться на собеседование</a>
+    </footer>
 
 </body>
 </html>

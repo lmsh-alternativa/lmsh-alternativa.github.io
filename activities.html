@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fffdf8">
     <title>Неучебная часть | ЛМШ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..800&display=swap">
     <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">ЛМШ «Альтернатива» при ЦДОД</a>
-        <nav>
+        <a href="index.html" class="logo">
+            <span class="logo-mark">ЛМШ</span>
+            <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
+        <nav id="site-nav" aria-label="Разделы сайта">
             <a href="index.html">О нас</a>
             <a href="study.html">Учебная часть</a>
-            <!-- Активный пункт меню подсвечен бирюзовым цветом -->
-            <a href="activities.html" style="color: var(--accent-teal);">Неучебная часть</a>
+            <!-- Активный раздел отмечен aria-current -->
+            <a href="activities.html" aria-current="page">Неучебная часть</a>
             <a href="admission.html">Собеседования</a>
         </nav>
     </header>
@@ -25,7 +34,7 @@
     </section>
 
     <!-- Блок 1: Клубы -->
-    <section class="split-section">
+    <section class="split">
         <div class="split-text">
             <h2>Вечерние клубы</h2>
             <p>Каждый вечер работают площадки по интересам: настольные игры, гитара, кинопоказы и дискуссионные клубы. Любой желающий может найти занятие по душе или организовать что-то своё.</p>
@@ -36,8 +45,8 @@
         </div>
     </section>
 
-    <!-- Блок 2: Отрядное время (flex-direction: row-reverse меняет текст и фото местами) -->
-    <section class="split-section" style="flex-direction: row-reverse;">
+    <!-- Блок 2: Отрядное время (split--reverse меняет текст и фото местами) -->
+    <section class="split split--reverse">
         <div class="split-text">
             <h2>Отрядное время</h2>
             <p>Важная и уютная часть вечера. Время, когда можно собраться всем отрядом, обсудить прошедший день, поделиться впечатлениями, поиграть в отрядные игры и просто пообщаться в кругу друзей.</p>
@@ -49,7 +58,7 @@
     </section>
 
     <!-- Блок 3: Игры и творчество -->
-    <section class="split-section">
+    <section class="split">
         <div class="split-text">
             <h2>Интеллектуальные игры и творчество</h2>
             <p>Мы проводим турниры по «Что? Где? Когда?» и различным квизам. А на творческих вечерах можно проявить себя в театральных постановках.</p>
@@ -60,8 +69,8 @@
         </div>
     </section>
 
-    <!-- Блок 4: Игрушка (flex-direction: row-reverse для шахматного порядка) -->
-    <section class="split-section" style="flex-direction: row-reverse;">
+    <!-- Блок 4: Большая игра (split--reverse для шахматного порядка) -->
+    <section class="split split--reverse">
         <div class="split-text">
             <h2>Большая игра</h2>
             <p>Это не просто классическая беготня по станциям, а масштабное событие на всей территории лагеря. Мы придумываем необычный сюжет, интересные механики и нестандартные задания, чтобы каждый раз удивлять участников.</p>
@@ -71,6 +80,11 @@
             <img src="ССЫЛКА_НА_ФОТО_4.jpg" alt="Большая игра">
         </div>
     </section>
+
+    <footer>
+        <span>ЛМШ «Альтернатива» при ЦДОД</span>
+        <a href="admission.html">Записаться на собеседование</a>
+    </footer>
 
 </body>
 </html>

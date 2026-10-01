@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fffdf8">
     <title>Главная | ЛМШ</title>
-    <!-- Подключение иконок -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Подключение стилей -->
+    <!-- Шрифт Golos Text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..800&display=swap">
+    <!-- Подключение стилей и меню для телефона -->
     <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">ЛМШ «Альтернатива» при ЦДОД</a>
-        <nav>
-            <a href="index.html" style="color: var(--accent-teal);">О нас</a>
+        <a href="index.html" class="logo">
+            <span class="logo-mark">ЛМШ</span>
+            <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
+        <nav id="site-nav" aria-label="Разделы сайта">
+            <a href="index.html" aria-current="page">О нас</a>
             <a href="study.html">Учебная часть</a>
             <a href="activities.html">Неучебная часть</a>
             <a href="admission.html">Собеседования</a>
@@ -22,26 +30,37 @@
     </header>
 
     <section class="hero">
-        <h1>Проведи лето с умом</h1>
-        <p>Областной профильный лагерь «Летняя многопрофильная школа "Альтернатива"» (ЛМШ). 1–21 августа.</p>
-        <a href="admission.html" class="btn">Хочу поехать!</a>
+        <div>
+            <h1>Проведи лето <span class="marker">с умом</span></h1>
+            <p class="lead">Областной профильный лагерь «Летняя многопрофильная школа "Альтернатива"» (ЛМШ). <span class="nowrap">1–21 августа</span>.</p>
+            <div class="actions">
+                <a href="admission.html" class="btn">Хочу поехать!</a>
+                <a href="study.html" class="text-link">Как устроена учёба</a>
+            </div>
+        </div>
+
+        <!-- Коротко о смене -->
+        <dl class="facts">
+            <div><dt>Когда</dt><dd>1–21 августа</dd></div>
+            <div><dt>Для кого</dt><dd>Старшеклассники</dd></div>
+            <div><dt>Учёба</dt><dd>3 пары в день, курсы выбираешь сам</dd></div>
+            <div><dt>Кафедры</dt><dd>6 кафедр</dd></div>
+            <div><dt>Собеседования</dt><dd>Тула, Ефремов или онлайн</dd></div>
+        </dl>
     </section>
 
-    <section id="about" class="features">
-        <h2>Почему выбирают ЛМШ?</h2>
-        <div class="features-grid">
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-users"></i></div>
+    <section id="about" class="section">
+        <h2>Что такое ЛМШ</h2>
+        <div class="about-cols">
+            <div>
                 <h3>О нас</h3>
                 <p>ЛМШ - это некоммерческий образовательный лагерь для старшеклассников. Наша школа существует благодаря энтузиазму коллектива молодых талантливых преподавателей.</p>
             </div>
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-theater-masks"></i></div>
+            <div>
                 <h3>Атмосфера</h3>
                 <p>ЛМШ - это не только учеба. Мы организуем разные виды досуга: вечерние клубы, масштабные игры, творческие концерты и теплые отрядные посиделки.</p>
             </div>
-            <div class="card">
-                <div class="icon-box"><i class="fas fa-graduation-cap"></i></div>
+            <div>
                 <h3>Образование</h3>
                 <p>Учебный процесс нацелен на понимание предмета. Ученики сами выбирают курсы, планируют свое расписание и обращаются за помощью к преподавателям.</p>
             </div>
@@ -49,29 +68,29 @@
     </section>
 
     <!-- Учебная часть -->
-    <section class="split-section">
+    <section class="split">
         <div class="split-text">
             <h2>Учебная часть</h2>
             <p>Мы рассказываем о науке так, как это не делают в школе. Три пары каждый день, свобода в выборе курсов и разные уровни сложности - от ликбезов до олимпиадных пар.</p>
 
-            <div class="tags">
-                <a href="physmath.html" class="tag">Физмат</a>
-                <a href="chembio.html" class="tag">Химбио</a>
-                <a href="humanities.html" class="tag">Гуманитарные науки</a>
-                <a href="it.html" class="tag">Информатика</a>
-            </div>
+            <ul class="link-list">
+                <li><a href="physmath.html">Физмат</a></li>
+                <li><a href="chembio.html">Химбио</a></li>
+                <li><a href="humanities.html">Гуманитарные науки</a></li>
+                <li><a href="it.html">Информатика</a></li>
+            </ul>
         </div>
         <div class="split-image">
             <img src="ФОТО_УЧЕБА.jpg" alt="Учебный процесс">
         </div>
     </section>
 
-    <!-- Неучебная часть (картинка слева, текст справа) -->
-    <section class="split-section" style="flex-direction: row-reverse; background-color: var(--secondary-bg); border-radius: 40px; margin: 40px auto;">
-        <div class="split-text" style="padding-left: 20px;">
+    <!-- Неучебная часть (на компьютере картинка слева, текст справа) -->
+    <section class="split split--reverse band">
+        <div class="split-text">
             <h2>Неучебная часть</h2>
             <p>Лучший отдых - это смена деятельности. Во второй половине дня тебя ждут клубы по интересам, спортивные турниры, интеллектуальные игры и уникальные форматы наших больших интерактивов.</p>
-            <a href="activities.html" class="btn" style="margin-top: 20px; font-size: 0.95rem;">Узнать больше об отдыхе</a>
+            <a href="activities.html" class="btn btn-dark">Узнать больше об отдыхе</a>
         </div>
         <div class="split-image">
             <img src="ФОТО_ОТДЫХ.jpg" alt="Неучебная часть">
@@ -79,8 +98,8 @@
     </section>
 
     <!-- Фотогалерея -->
-    <section style="padding: 80px 20px; max-width: 1200px; margin: 0 auto; text-align: center;">
-        <h2 style="font-size: 2.8rem; margin-bottom: 40px; color: var(--text-main);">Атмосфера ЛМШ</h2>
+    <section class="section">
+        <h2>Атмосфера ЛМШ</h2>
         <div class="gallery">
             <img src="ФОТО_ГАЛЕРЕЯ_1.jpg" alt="Атмосфера лагеря 1">
             <img src="ФОТО_ГАЛЕРЕЯ_2.jpg" alt="Атмосфера лагеря 2">
@@ -90,16 +109,19 @@
     </section>
 
     <!-- Собеседования -->
-    <section class="split-section" style="margin-bottom: 80px;">
-        <div class="split-text">
+    <section class="cta">
+        <div>
             <h2>Присоединяйся к нам</h2>
             <p>Готов стать частью ЛМШ? Мы проводим очные собеседования в Туле и Ефремове, а также онлайн-встречи для тех, кто из других городов. Это простое знакомство, а не экзамен!</p>
-            <a href="admission.html" class="btn" style="margin-top: 20px;">Записаться на собеседование</a>
+            <a href="admission.html" class="btn btn-dark">Записаться на собеседование</a>
         </div>
-        <div class="split-image">
-            <img src="ФОТО_СОБЕСЕДОВАНИЕ.jpg" alt="Запись в ЛМШ">
-        </div>
+        <img src="ФОТО_СОБЕСЕДОВАНИЕ.jpg" alt="Запись в ЛМШ">
     </section>
+
+    <footer>
+        <span>ЛМШ «Альтернатива» при ЦДОД</span>
+        <a href="admission.html">Записаться на собеседование</a>
+    </footer>
 
 </body>
 </html>

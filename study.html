@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fffdf8">
     <title>Учебная часть | ЛМШ</title>
-    <!-- Подключение созданного внешнего файла стилей -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..800&display=swap">
     <link rel="stylesheet" href="style.css">
+    <script src="menu.js" defer></script>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo">ЛМШ «Альтернатива» при ЦДОД</a>
-        <nav>
+        <a href="index.html" class="logo">
+            <span class="logo-mark">ЛМШ</span>
+            <span class="logo-name">«Альтернатива» <small>при ЦДОД</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Меню</button>
+        <nav id="site-nav" aria-label="Разделы сайта">
             <a href="index.html">О нас</a>
-            <!-- Активная ссылка теперь использует бирюзовый акцент -->
-            <a href="study.html" style="color: var(--accent-teal);">Учебная часть</a>
+            <!-- Активный раздел отмечен aria-current -->
+            <a href="study.html" aria-current="page">Учебная часть</a>
             <a href="activities.html">Неучебная часть</a>
             <a href="admission.html">Собеседования</a>
         </nav>
@@ -41,7 +49,7 @@
         </div>
 
         <h2>Кафедры</h2>
-        <p style="margin-bottom: 30px; font-size: 1.1rem; color: var(--text-muted);">В ЛМШ есть 6 кафедр, объединяющих курсы из разных областей знаний. Можно выбрать курсы любой кафедры независимо от профиля ученика.</p>
+        <p class="section-intro">В ЛМШ есть 6 кафедр, объединяющих курсы из разных областей знаний. Можно выбрать курсы любой кафедры независимо от профиля ученика.</p>
 
         <div class="departments-grid">
             <!-- 1. Кафедра Физмат -->
@@ -93,13 +101,19 @@
             <div class="info-block">
                 <h3>О зачётах</h3>
                 <p>Обязательным условием прохождения курса в ЛМШ является получение зачёта. Зачёты проходят в день зачётов в конце каждого учебного цикла. Зачёт состоит из решения заданий и беседы с преподавателем по пройденному материалу. Оценки в зачётки выставляются по шкале от 1 до 5.</p>
-            </div> <div class="info-block">
+            </div>
+            <div class="info-block">
                 <h3>Лекции и мастер-классы</h3>
                 <p>Иногда вечером вместо клубов проводятся лекции. Это не ещё одна учебная пара - домашнего задания нет. Лекторы рассказывают про теорию относительности, происхождение вселенной или, например, как открыть стартап.</p>
             </div>
         </div>
 
     </div>
+
+    <footer>
+        <span>ЛМШ «Альтернатива» при ЦДОД</span>
+        <a href="admission.html">Записаться на собеседование</a>
+    </footer>
 
 </body>
 </html>
