@@ -971,19 +971,35 @@ header nav {
 }
 
 /* =========================================
-   ПОДВАЛ
+   ПОДВАЛ С КОНТАКТАМИ
    ========================================= */
 
 footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 8px 32px;
-    padding: 28px var(--edge);
+    --footer-muted: #b9b5ad;
+    display: grid;
+    gap: 32px;
+    padding: 40px var(--edge);
     background: var(--ink);
     color: var(--paper);
     font-size: 0.95rem;
 }
+
+    footer p {
+        margin: 0 0 6px;
+        color: var(--footer-muted);
+    }
+
+    footer .footer-name {
+        color: var(--paper);
+        font-size: 1.05rem;
+        font-weight: 700;
+    }
+
+    footer h2 {
+        margin-bottom: 14px;
+        font-size: 1.05rem;
+        letter-spacing: 0;
+    }
 
     footer a {
         color: var(--paper);
@@ -991,3 +1007,37 @@ footer {
         text-decoration-thickness: 2px;
         text-underline-offset: 4px;
     }
+
+    .footer-about a {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+/* Контакты: название слева, ссылка справа */
+.contacts dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 10px 20px;
+    margin: 0;
+}
+
+    .contacts dl div {
+        display: contents;
+    }
+
+.contacts dt {
+    color: var(--footer-muted);
+}
+
+.contacts dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+@media (min-width: 760px) {
+    footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        padding: 56px var(--edge);
+    }
+}
