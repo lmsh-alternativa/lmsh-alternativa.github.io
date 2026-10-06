@@ -364,6 +364,10 @@ header nav {
     box-decoration-break: clone;
 }
 
+    .marker--pink {
+        background-image: linear-gradient(transparent 58%, var(--pink) 58%, var(--pink) 92%, transparent 92%);
+    }
+
 /* Коротко о смене — список «вопрос — ответ».
    subgrid выравнивает ответы по самому длинному вопросу */
 .facts {
@@ -884,12 +888,6 @@ header nav {
     .about-study-grid,
     .info-blocks {
         grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (min-width: 1000px) {
-    .departments-grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 }
 
