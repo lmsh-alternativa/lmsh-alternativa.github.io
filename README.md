@@ -16,7 +16,7 @@
 |---|---|
 | `index.html` | Главная: о лагере, атмосфера, ближайшая смена, контакты |
 | `study.html` | Учебная часть и кафедры |
-| `physmath.html`, `chembio.html`, `humanities.html`, `it.html`, `math.html`, `bio.html` | Страницы кафедр |
+| `physmath.html`, `chembio.html`, `humanities.html`, `it.html` | Страницы кафедр |
 | `activities.html` | Неучебная часть |
 | `igrushka.html`, `clubs.html`, `otryad.html` | Игрушка, вечерние клубы, отрядное время |
 | `history.html` | История: все смены по годам |
